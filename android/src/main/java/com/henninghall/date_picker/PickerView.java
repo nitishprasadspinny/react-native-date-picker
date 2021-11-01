@@ -44,6 +44,8 @@ public class PickerView extends RelativeLayout {
             LinearLayout layout = new LinearLayout(getContext());
             LayoutInflater.from(getContext()).inflate(state.derived.getRootLayout(), layout);
             this.addView(layout, layoutParams);
+            //issue link: https://github.com/henninghall/react-native-date-picker/issues/301
+            findViewById(R.id.container).setId(100023);
             uiManager = new UIManager(state, this);
         }
 
